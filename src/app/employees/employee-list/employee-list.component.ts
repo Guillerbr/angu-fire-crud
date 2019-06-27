@@ -17,15 +17,17 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit() {
     this.service.getEmployees().subscribe(actionArray => {
-    this.list = actionArray.map(item => {
-      return {
-        id: item.payload.doc.id,
-         ...item.payload.doc.data()
-         } as Employee;
+      this.list = actionArray.map(item => {
+        return {
+          id: item.payload.doc.id,
+          ...item.payload.doc.data()
+        } as Employee;
 
-    })
+      })
 
     });
   }
-
+  onEdit(emp: Employee) {
+    this.service.formData =Object.assign({},emp);
+  }
 }
