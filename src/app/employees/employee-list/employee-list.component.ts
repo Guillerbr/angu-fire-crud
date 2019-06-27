@@ -30,4 +30,10 @@ export class EmployeeListComponent implements OnInit {
   onEdit(emp: Employee) {
     this.service.formData =Object.assign({},emp);
   }
+  onDelete(id:string){
+    if(confirm("Are you sure to delete this record")){
+
+    }
+
+  }
 }
