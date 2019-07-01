@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
 
+A single-page application (SPA).
 Simple page applications,crud,mvc,firebase DB.
 Help the project.
 
